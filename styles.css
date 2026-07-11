@@ -8,7 +8,6 @@
   --pop-2: #0e9aa7;     /* teal */
   --accent: #ffd23f;    /* warm yellow */
   --soft: #ffded0;      /* soft tangerine wash */
-  --line: #16143b;
 
   --font-display: "Fredoka", system-ui, sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
@@ -148,10 +147,6 @@ a { color: inherit; }
   .nav-drawer.open { display: flex; }
 }
 
-/* ─── star + flower shapes (svg in dom) */
-.shape-spin { animation: none; transform-origin: 50% 50%; }
-.shape-bob { animation: none; }
-
 /* ─── section */
 .section {
   padding: 110px 0 90px;
@@ -194,6 +189,8 @@ a { color: inherit; }
 }
 @media (max-width: 860px) {
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-photo-wrap { order: 2; }
+  .about-body { order: 1; }
 }
 .about-photo-wrap {
   position: relative;
@@ -451,6 +448,7 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
 }
+/* whole card is not clickable — only the figures are, so no hover lift */
 .cc-top {
   padding: 24px 24px 26px;
   display: flex;
@@ -836,7 +834,7 @@ a { color: inherit; }
   font-size: 14px; font-weight: 600;
 }
 
-/* ─── floaty shapes */
+/* ─── floaty shapes (static — no spin/bob) */
 .float-shapes { position: absolute; inset: 0; pointer-events: none; }
 .float-shapes > * { position: absolute; }
 
@@ -847,7 +845,7 @@ a { color: inherit; }
   50% { transform: rotate(3deg); }
 }
 
-/* density: when typing in main areas, prevent overflows */
+/* density: prevent overflows */
 img, svg { max-width: 100%; }
 
 /* ─── mobile polish */
