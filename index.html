@@ -4,62 +4,84 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>sneha subramanian — ux research + strategy</title>
-<meta name="description" content="Sneha Subramanian — UX researcher &amp; strategist. Approach, case studies, favorite reads, and things she's currently making." />
+<meta name="description" content="sneha subramanian is a mixed methods ux researcher and strategist shaping financial wellness tools for 30MM+ customers." />
+<meta name="theme-color" content="#ffd23f" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
 </head>
-<body>
-<div id="top"></div>
+<body id="top">
 
-<nav class="nav">
+<!-- reusable sticker shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="shape-star" viewBox="-50 -50 100 100">
+    <path d="M0,-46 L11,-15 L42,-15 L17,4 L26,34 L0,16 L-26,34 L-17,4 L-42,-15 L-11,-15 Z" fill="currentColor" />
+  </symbol>
+  <symbol id="shape-flower" viewBox="-50 -50 100 100">
+    <g fill="currentColor">
+      <ellipse cx="0" cy="-26" rx="14" ry="22" />
+      <ellipse cx="0" cy="-26" rx="14" ry="22" transform="rotate(60)" />
+      <ellipse cx="0" cy="-26" rx="14" ry="22" transform="rotate(120)" />
+      <ellipse cx="0" cy="-26" rx="14" ry="22" transform="rotate(180)" />
+      <ellipse cx="0" cy="-26" rx="14" ry="22" transform="rotate(240)" />
+      <ellipse cx="0" cy="-26" rx="14" ry="22" transform="rotate(300)" />
+    </g>
+    <circle cx="0" cy="0" r="13" style="fill: var(--bg)" />
+  </symbol>
+</svg>
+
+<nav class="nav" aria-label="main">
   <div class="nav-inner">
-    <a href="#top" class="nav-mark" id="navMark">
+    <a href="#top" class="nav-mark">
       <span class="dot" aria-hidden="true">
         <svg viewBox="-50 -50 100 100" width="20" height="20">
-          <circle cx="-16" cy="-8" r="6" fill="var(--ink)"></circle>
-          <circle cx="16" cy="-8" r="6" fill="var(--ink)"></circle>
-          <path d="M-20 12 Q 0 32, 20 12" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"></path>
+          <circle cx="-16" cy="-8" r="6" style="fill: var(--ink)" />
+          <circle cx="16" cy="-8" r="6" style="fill: var(--ink)" />
+          <path d="M-20 12 Q 0 32, 20 12" fill="none" style="stroke: var(--ink)" stroke-width="6" stroke-linecap="round" />
         </svg>
       </span>sneha
     </a>
     <div class="nav-links">
       <a href="#about">about</a>
       <a href="#philosophy">approach</a>
-      <a href="#work-compact">work</a>
+      <a href="#work">work</a>
     </div>
     <div class="nav-right">
-      <a class="pill solid nav-sayhi" href="#contact">say hi ↗</a>
-      <button class="nav-burger" id="navBurger" aria-label="menu" aria-expanded="false">
+      <a class="pill solid nav-sayhi" href="#contact">contact ↗</a>
+      <button class="nav-burger" type="button" aria-label="menu" aria-expanded="false" aria-controls="nav-drawer">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-  <div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer" id="nav-drawer">
     <a href="#about">about</a>
     <a href="#philosophy">approach</a>
-    <a href="#work-compact">work</a>
+    <a href="#work">work</a>
     <a class="drawer-cta" href="#contact">say hi ↗</a>
   </div>
 </nav>
 
+<main>
+
+<!-- ─── about ─────────────────────────────────────────────── -->
 <section class="section about" id="about">
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-h">i'm <span style="color: var(--pop)">sneha </span></h2>
-      <span class="section-num">/ 01</span>
     </div>
     <div class="about-grid">
       <div class="about-photo-wrap">
         <div class="about-photo">
-          <img src="assets/sneha-portrait.png" alt="portrait of sneha" class="about-photo-img">
+          <img src="assets/sneha-portrait.webp" alt="portrait of sneha" class="about-photo-img" width="800" height="910" />
         </div>
-        <div class="about-photo-tag wiggle">Hai!</div>
+        <div class="about-photo-tag wiggle" aria-hidden="true">Hai!</div>
       </div>
       <div class="about-body">
         <p>
-          i'm a mixed methods <strong>ux researcher</strong> and <strong>strategist</strong> with 5+ years of industry experience. i've worked across finance, higher ed, and social impact.
+          i'm a mixed methods <strong>ux researcher</strong> and <strong>strategist</strong> with 6+ years of industry experience. i've worked across finance, higher ed, and social impact.
         </p>
         <p>i translate <strong>deep user understanding</strong> into product direction and business impact.</p>
         <p>
@@ -69,49 +91,36 @@
       </div>
     </div>
   </div>
+
   <div class="float-shapes" aria-hidden="true">
-    <div style="top:56px;right:56px">
-      <svg viewBox="-50 -50 100 100" width="92" height="92">
-        <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(0)"></ellipse>
-        <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(60)"></ellipse>
-        <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(120)"></ellipse>
-        <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(180)"></ellipse>
-        <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(240)"></ellipse>
-        <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(300)"></ellipse>
-        <circle cx="0" cy="0" r="13" fill="var(--bg)"></circle>
-      </svg>
-    </div>
-    <div style="top:186px;right:128px">
-      <svg viewBox="-50 -50 100 100" width="52" height="52">
-        <path d="M0,-46 L11,-15 L42,-15 L17,4 L26,34 L0,16 L-26,34 L-17,4 L-42,-15 L-11,-15 Z" fill="var(--pop-2)"></path>
-      </svg>
-    </div>
+    <div style="top: 56px; right: 56px; color: var(--pop-2)"><svg width="92" height="92"><use href="#shape-flower" /></svg></div>
+    <div style="top: 186px; right: 128px; color: var(--pop-2)"><svg width="52" height="52"><use href="#shape-star" /></svg></div>
   </div>
 </section>
 
+<!-- ─── approach ──────────────────────────────────────────── -->
 <section class="section" id="philosophy">
   <div class="wrap">
     <div class="section-head">
       <div>
         <h2 class="section-h">my <span style="color: var(--pop-2)">approach</span></h2>
-        <p style="margin-top:14px;font-size:17px;max-width:44ch">core principles i carry throughout the process.</p>
+        <p class="section-sub" style="max-width: 44ch">core principles i carry throughout the process</p>
       </div>
-      <span class="section-num">/ 02</span>
     </div>
 
     <div class="philo-grid">
       <div class="philo-card">
-        <div class="philo-top"><div class="num">01</div></div>
+        <div class="num">01</div>
         <div class="name">advocate for the user</div>
         <div class="desc">being a researcher usually means being closest to the customer and that gives me the responsibility to advocate for them and share their stories in impactful ways.</div>
       </div>
       <div class="philo-card">
-        <div class="philo-top"><div class="num">02</div></div>
+        <div class="num">02</div>
         <div class="name">research is collaboration</div>
         <div class="desc">i want to get the whole team excited and engaged about users. the best insights stick when everyone helped uncover them.</div>
       </div>
       <div class="philo-card">
-        <div class="philo-top"><div class="num">03</div></div>
+        <div class="num">03</div>
         <div class="name">lead with purpose</div>
         <div class="desc">every study starts with a clear why. if the question isn't worth answering, we don't run it so the work we do always points somewhere that matters.</div>
       </div>
@@ -119,11 +128,11 @@
   </div>
 </section>
 
-<section class="section cases-compact" id="work-compact">
+<!-- ─── case studies ──────────────────────────────────────── -->
+<section class="section cases-compact" id="work">
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-h">case <span style="color: var(--pop)">studies</span></h2>
-      <span class="section-num">/ 03</span>
     </div>
 
     <div class="cc-callout">
@@ -133,6 +142,7 @@
     </div>
 
     <div class="cc-grid">
+
       <!-- case 01 -->
       <article class="cc-card pop">
         <div class="cc-top">
@@ -160,62 +170,57 @@
         <div class="cc-impact">
           <div class="cc-label">the impact</div>
           <div class="cc-impact-metrics">
-            <div class="cc-im"><span class="cc-im-n">+21%</span><span class="cc-im-l">comprehension</span></div>
+            <div class="cc-im"><span class="cc-im-n">+26%</span><span class="cc-im-l">comprehension</span></div>
             <div class="cc-im"><span class="cc-im-n">65%</span><span class="cc-im-l">better than competitor</span></div>
           </div>
           <p class="cc-impact-text">Score change reasons and their point impact are now surfaced right on the homepage.</p>
           <div class="cc-impact-figs">
-            <button type="button" class="cc-fig" aria-label="Enlarge visual">
-              <div class="viz viz-chart">
-                <div class="viz-title">% correctly identifying score-change reasons</div>
-                <div class="viz-chart-plot">
-                  <div class="viz-grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-                  <div class="viz-col">
-                    <div class="viz-bar-track">
-                      <div class="viz-bar hot" style="height:86.6667%"><span class="viz-bar-val">52%</span></div>
-                    </div>
-                    <div class="viz-bar-label">New</div>
-                  </div>
-                  <div class="viz-col">
-                    <div class="viz-bar-track">
-                      <div class="viz-bar" style="height:68.3333%"><span class="viz-bar-val">41%</span></div>
-                    </div>
-                    <div class="viz-bar-label">Current</div>
-                  </div>
-                  <div class="viz-col">
-                    <div class="viz-bar-track">
-                      <div class="viz-bar" style="height:50%"><span class="viz-bar-val">30%</span></div>
-                    </div>
-                    <div class="viz-bar-label">Competitor</div>
-                  </div>
-                </div>
-              </div>
+            <button type="button" class="cc-fig" aria-label="Enlarge chart: percent correctly identifying score-change reasons">
+              <span class="viz viz-chart">
+                <span class="viz-title">% correctly identifying score-change reasons</span>
+                <span class="viz-chart-plot">
+                  <span class="viz-grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                  <span class="viz-col">
+                    <span class="viz-bar-track"><span class="viz-bar hot" style="height: 86.667%"><span class="viz-bar-val">52%</span></span></span>
+                    <span class="viz-bar-label">New</span>
+                  </span>
+                  <span class="viz-col">
+                    <span class="viz-bar-track"><span class="viz-bar" style="height: 68.333%"><span class="viz-bar-val">41%</span></span></span>
+                    <span class="viz-bar-label">Current</span>
+                  </span>
+                  <span class="viz-col">
+                    <span class="viz-bar-track"><span class="viz-bar" style="height: 50%"><span class="viz-bar-val">30%</span></span></span>
+                    <span class="viz-bar-label">Competitor</span>
+                  </span>
+                </span>
+              </span>
               <span class="cc-fig-zoom" aria-hidden="true">⤢</span>
             </button>
-            <button type="button" class="cc-fig" aria-label="Enlarge visual">
-              <div class="viz viz-wire">
-                <div class="viz-phone-col">
+
+            <button type="button" class="cc-fig" aria-label="Enlarge before and after homepage wireframes">
+              <span class="viz viz-wire">
+                <span class="viz-phone-col">
                   <span class="viz-ba before">before</span>
-                  <div class="viz-phone">
-                    <div class="viz-scr-hero">Credit Score</div>
-                    <div class="viz-scr-label">Score Factors</div>
-                    <div class="viz-factor-grid"><span></span><span></span><span></span><span></span></div>
-                    <div class="viz-scr-btn">What's Changed</div>
-                  </div>
-                  <p class="viz-cap">reasons aren't stated — users click in for vague info.</p>
-                </div>
-                <div class="viz-phone-col">
+                  <span class="viz-phone">
+                    <span class="viz-scr-hero">Credit Score</span>
+                    <span class="viz-scr-label">Score Factors</span>
+                    <span class="viz-factor-grid"><span></span><span></span><span></span><span></span></span>
+                    <span class="viz-scr-btn">What's Changed</span>
+                  </span>
+                  <span class="viz-cap">reasons aren't stated — users click in for vague info.</span>
+                </span>
+                <span class="viz-phone-col">
                   <span class="viz-ba after">after</span>
-                  <div class="viz-phone">
-                    <div class="viz-scr-hero">Credit Score</div>
-                    <div class="viz-scr-label">Why your score changed</div>
-                    <div class="viz-reason"><span>Reason #1</span><b>+X pts</b></div>
-                    <div class="viz-reason"><span>Reason #2</span><b>+X pts</b></div>
-                    <div class="viz-reason"><span>Reason #3</span><b>+X pts</b></div>
-                  </div>
-                  <p class="viz-cap">reasons + point impact, surfaced on the homepage.</p>
-                </div>
-              </div>
+                  <span class="viz-phone">
+                    <span class="viz-scr-hero">Credit Score</span>
+                    <span class="viz-scr-label">Why your score changed</span>
+                    <span class="viz-reason"><span>Reason #1</span><b>+X pts</b></span>
+                    <span class="viz-reason"><span>Reason #2</span><b>+X pts</b></span>
+                    <span class="viz-reason"><span>Reason #3</span><b>+X pts</b></span>
+                  </span>
+                  <span class="viz-cap">reasons + point impact, surfaced on the homepage.</span>
+                </span>
+              </span>
               <span class="cc-fig-zoom" aria-hidden="true">⤢</span>
             </button>
           </div>
@@ -253,36 +258,38 @@
           </div>
           <p class="cc-impact-text">A 3× increase in new budgets created and a 72% lift in engagement.</p>
           <div class="cc-impact-figs">
-            <button type="button" class="cc-fig" aria-label="Enlarge visual">
-              <div class="viz viz-flow">
-                <div class="viz-flow-block">
-                  <div class="viz-flow-head">
+            <button type="button" class="cc-fig" aria-label="Enlarge budget set-up flow, before and after">
+              <span class="viz viz-flow">
+                <span class="viz-flow-block">
+                  <span class="viz-flow-head">
                     <span class="viz-ba before">before</span>
                     <span class="viz-flow-note">lengthy — 45% dropped off on the first screen</span>
-                  </div>
-                  <div class="viz-flow-steps">
-                    <div class="viz-step"><span class="viz-step-k">step 1</span><span class="viz-step-t">Enter monthly income</span></div>
-                    <div class="viz-step"><span class="viz-step-k">step 2</span><span class="viz-step-t">Enter monthly bills</span></div>
-                    <div class="viz-step"><span class="viz-step-k">step 3</span><span class="viz-step-t">Choose budget category</span></div>
-                    <div class="viz-step"><span class="viz-step-k">step 4</span><span class="viz-step-t">Enter budget</span></div>
-                    <div class="viz-step"><span class="viz-step-k">step 5</span><span class="viz-step-t">Confirm budget</span></div>
-                  </div>
-                </div>
-                <div class="viz-flow-arrow" aria-hidden="true">↓</div>
-                <div class="viz-flow-block">
-                  <div class="viz-flow-head">
+                  </span>
+                  <span class="viz-flow-steps">
+                    <span class="viz-step"><span class="viz-step-k">step 1</span><span class="viz-step-t">Enter monthly income</span></span>
+                    <span class="viz-step"><span class="viz-step-k">step 2</span><span class="viz-step-t">Enter monthly bills</span></span>
+                    <span class="viz-step"><span class="viz-step-k">step 3</span><span class="viz-step-t">Choose budget category</span></span>
+                    <span class="viz-step"><span class="viz-step-k">step 4</span><span class="viz-step-t">Enter budget</span></span>
+                    <span class="viz-step"><span class="viz-step-k">step 5</span><span class="viz-step-t">Confirm budget</span></span>
+                  </span>
+                </span>
+
+                <span class="viz-flow-arrow" aria-hidden="true">↓</span>
+
+                <span class="viz-flow-block">
+                  <span class="viz-flow-head">
                     <span class="viz-ba after">after</span>
                     <span class="viz-flow-note">Budget Lite — two steps, 3× more completions</span>
-                  </div>
-                  <div class="viz-flow-steps">
-                    <div class="viz-step removed"><span class="viz-step-k">removed</span><span class="viz-step-t">Enter monthly income</span></div>
-                    <div class="viz-step removed"><span class="viz-step-k">removed</span><span class="viz-step-t">Enter monthly bills</span></div>
-                    <div class="viz-step"><span class="viz-step-k">step 1</span><span class="viz-step-t">Choose budget category</span></div>
-                    <div class="viz-step"><span class="viz-step-k">step 2</span><span class="viz-step-t">Enter budget</span></div>
-                    <div class="viz-step removed"><span class="viz-step-k">removed</span><span class="viz-step-t">Confirm budget</span></div>
-                  </div>
-                </div>
-              </div>
+                  </span>
+                  <span class="viz-flow-steps">
+                    <span class="viz-step removed"><span class="viz-step-k">removed</span><span class="viz-step-t">Enter monthly income</span></span>
+                    <span class="viz-step removed"><span class="viz-step-k">removed</span><span class="viz-step-t">Enter monthly bills</span></span>
+                    <span class="viz-step"><span class="viz-step-k">step 1</span><span class="viz-step-t">Choose budget category</span></span>
+                    <span class="viz-step"><span class="viz-step-k">step 2</span><span class="viz-step-t">Enter budget</span></span>
+                    <span class="viz-step removed"><span class="viz-step-k">removed</span><span class="viz-step-t">Confirm budget</span></span>
+                  </span>
+                </span>
+              </span>
               <span class="cc-fig-zoom" aria-hidden="true">⤢</span>
             </button>
           </div>
@@ -319,111 +326,85 @@
           </div>
           <p class="cc-impact-text">Four mindsets developed from research helped the team gain a deeper understanding of who to design for and how. I intentionally chose mindsets over personas since managing debt is deeply tied to feelings of agency and knowledge rather than demographics.</p>
           <div class="cc-impact-figs">
-            <button type="button" class="cc-fig" aria-label="Enlarge visual">
-              <div class="viz viz-quad">
-                <span class="viz-quad-axis y top" style="font-size:13px">High Agency</span>
-                <span class="viz-quad-axis y bottom" style="font-size:13px">Low Agency</span>
+            <button type="button" class="cc-fig" aria-label="Enlarge mindset framework: awareness by agency">
+              <span class="viz viz-quad">
+                <span class="viz-quad-axis y top">High Agency</span>
+                <span class="viz-quad-axis y bottom">Low Agency</span>
                 <span class="viz-quad-axis x left">Low Awareness</span>
                 <span class="viz-quad-axis x right">High Awareness</span>
-                <div class="viz-quad-grid">
-                  <div class="viz-quad-cell">
-                    <div class="viz-quad-name">determined budgeter</div>
-                    <div class="viz-quad-desc">Surface strategies that move them toward the resilient strategist mindset.</div>
-                  </div>
-                  <div class="viz-quad-cell star">
-                    <div class="viz-quad-name"><span class="viz-quad-star" aria-hidden="true">★</span>resilient strategist</div>
-                    <div class="viz-quad-desc">Most motivated to manage debt; benefits from a 0% APR balance-transfer card.</div>
-                  </div>
-                  <div class="viz-quad-cell">
-                    <div class="viz-quad-name">steady stepper</div>
-                    <div class="viz-quad-desc">Daily/weekly goals keep motivation high and stress low — they want reminders to stay on track.</div>
-                  </div>
-                  <div class="viz-quad-cell">
-                    <div class="viz-quad-name">debt fatigued</div>
-                    <div class="viz-quad-desc">Unlikely to use the product, but connecting them to resources could reduce net charge-offs.</div>
-                  </div>
-                </div>
-              </div>
+                <span class="viz-quad-grid">
+                  <span class="viz-quad-cell">
+                    <span class="viz-quad-name">determined budgeter</span>
+                    <span class="viz-quad-desc">Surface strategies that move them toward the resilient strategist mindset.</span>
+                  </span>
+                  <span class="viz-quad-cell star">
+                    <span class="viz-quad-name"><span class="viz-quad-star" aria-hidden="true">★</span>resilient strategist</span>
+                    <span class="viz-quad-desc">Most motivated to manage debt; benefits from a 0% APR balance-transfer card.</span>
+                  </span>
+                  <span class="viz-quad-cell">
+                    <span class="viz-quad-name">steady stepper</span>
+                    <span class="viz-quad-desc">Daily/weekly goals keep motivation high and stress low — they want reminders to stay on track.</span>
+                  </span>
+                  <span class="viz-quad-cell">
+                    <span class="viz-quad-name">debt fatigued</span>
+                    <span class="viz-quad-desc">Unlikely to use the product, but connecting them to resources could reduce net charge-offs.</span>
+                  </span>
+                </span>
+              </span>
               <span class="cc-fig-zoom" aria-hidden="true">⤢</span>
             </button>
           </div>
         </div>
       </article>
+
     </div>
   </div>
 
-  <div class="cc-lightbox" id="ccLightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged visual">
-    <button class="cc-lightbox-close" aria-label="Close" id="ccLightboxClose">✕</button>
-    <div class="cc-lightbox-fig" id="ccLightboxFig"></div>
+  <div class="cc-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged visual" hidden>
+    <button type="button" class="cc-lightbox-close" aria-label="Close">✕</button>
+    <div class="cc-lightbox-fig"></div>
   </div>
 </section>
 
+<!-- ─── favorite reads ────────────────────────────────────── -->
 <section class="section reading" id="reading">
   <div class="wrap">
     <div class="section-head">
       <div>
         <h2 class="section-h">favorite <span style="color: var(--accent)">reads</span></h2>
-        <p style="margin-top:14px;font-size:17px;max-width:48ch;opacity:.85">always looking for book recs!</p>
+        <p class="section-sub" style="max-width: 48ch; opacity: .85">always looking for book recs!</p>
       </div>
-      <span class="section-num">/ 04</span>
     </div>
 
     <div class="book-row">
-      <figure class="book" style="--book-bg: var(--pop); --book-ink: var(--bg)">
-        <div class="book-cover">
-          <span class="book-cover-fallback" aria-hidden="true">
-            <span class="bcf-title">homegoing</span>
-            <span class="bcf-author">Yaa Gyasi</span>
-          </span>
-          <img class="book-cover-img" src="assets/cover-homegoing.jpg" alt="Homegoing — book cover" loading="lazy">
-        </div>
+      <figure class="book" style="--book-bg: var(--pop)">
+        <div class="book-cover"><img src="assets/cover-homegoing.webp" alt="Homegoing — book cover" loading="lazy" width="480" height="740" /></div>
         <figcaption class="book-cap">
           <span class="book-status">best read of 2026</span>
           <span class="book-cap-title">homegoing</span>
           <span class="book-cap-author">— Yaa Gyasi</span>
         </figcaption>
       </figure>
-
-      <figure class="book" style="--book-bg: var(--pop-2); --book-ink: var(--bg)">
-        <div class="book-cover">
-          <span class="book-cover-fallback" aria-hidden="true">
-            <span class="bcf-title">pachinko</span>
-            <span class="bcf-author">Min Jin Lee</span>
-          </span>
-          <img class="book-cover-img" src="assets/cover-pachinko.webp" alt="Pachinko — book cover" loading="lazy">
-        </div>
+      <figure class="book" style="--book-bg: var(--pop-2)">
+        <div class="book-cover"><img src="assets/cover-pachinko.webp" alt="Pachinko — book cover" loading="lazy" width="480" height="730" /></div>
         <figcaption class="book-cap">
           <span class="book-status">all-time fave</span>
           <span class="book-cap-title">pachinko</span>
           <span class="book-cap-author">— Min Jin Lee</span>
         </figcaption>
       </figure>
-
-      <figure class="book" style="--book-bg: var(--accent); --book-ink: var(--ink)">
-        <div class="book-cover">
-          <span class="book-cover-fallback" aria-hidden="true">
-            <span class="bcf-title">the bright years</span>
-            <span class="bcf-author">Sarah Damoff</span>
-          </span>
-          <img class="book-cover-img" src="assets/cover-bright-years.jpg" alt="The Bright Years — book cover" loading="lazy">
-        </div>
+      <figure class="book" style="--book-bg: var(--accent)">
+        <div class="book-cover"><img src="assets/cover-bright-years.webp" alt="The Bright Years — book cover" loading="lazy" width="480" height="724" /></div>
         <figcaption class="book-cap">
           <span class="book-status">made me cry the most</span>
           <span class="book-cap-title">the bright years</span>
           <span class="book-cap-author">— Sarah Damoff</span>
         </figcaption>
       </figure>
-
-      <figure class="book" style="--book-bg: var(--soft); --book-ink: var(--ink)">
-        <div class="book-cover">
-          <span class="book-cover-fallback" aria-hidden="true">
-            <span class="bcf-title">convenience store woman</span>
-            <span class="bcf-author">Sayaka Murata</span>
-          </span>
-          <img class="book-cover-img" src="assets/cover-convenience-store-woman.jpg" alt="Convenience Store Woman — book cover" loading="lazy">
-        </div>
+      <figure class="book" style="--book-bg: var(--soft)">
+        <div class="book-cover"><img src="assets/cover-convenience-store-woman.webp" alt="Convenience Store Woman — book cover" loading="lazy" width="480" height="650" /></div>
         <figcaption class="book-cap">
-          <span class="book-status">FUNNY + INSIGHTFUL</span>
+          <span class="book-status">funny + insightful</span>
           <span class="book-cap-title">convenience store woman</span>
           <span class="book-cap-author">— Sayaka Murata</span>
         </figcaption>
@@ -432,27 +413,27 @@
   </div>
 </section>
 
+<!-- ─── currently making ──────────────────────────────────── -->
 <section class="section" id="making">
   <div class="wrap">
     <div class="section-head">
       <div>
         <h2 class="section-h">currently <span style="color: var(--pop)">making</span></h2>
-        <p style="margin-top:14px;font-size:17px;max-width:46ch">things i'm tinkering with off-screen. mostly with my hands, for once.</p>
+        <p class="section-sub" style="max-width: 46ch">things i'm tinkering with off-screen. mostly with my hands, for once.</p>
       </div>
-      <span class="section-num">/ 05</span>
     </div>
 
     <div class="making-gallery">
       <figure class="make-shot">
-        <img src="assets/make-frog.png" alt="hand cross-stitched frog on a white t-shirt">
+        <img src="assets/make-frog.webp" alt="hand cross-stitched frog on a white t-shirt" loading="lazy" width="900" height="891" />
         <figcaption>custom frog cross stitch</figcaption>
       </figure>
       <figure class="make-shot tall">
-        <img src="assets/make-polkadot.png" alt="handmade polka dot camisole top">
+        <img src="assets/make-polkadot.webp" alt="handmade polka dot camisole top" loading="lazy" width="900" height="862" />
         <figcaption>polka dot summer pjs</figcaption>
       </figure>
       <figure class="make-shot">
-        <img src="assets/make-pokemon.png" alt="charmander and squirtle pokemon cross stitch on folded t-shirts">
+        <img src="assets/make-pokemon.webp" alt="charmander and squirtle pokemon cross stitch on folded t-shirts" loading="lazy" width="900" height="941" />
         <figcaption>gotta cross stitch'em all!</figcaption>
       </figure>
       <figure class="make-shot soon">
@@ -465,59 +446,35 @@
   </div>
 </section>
 
+<!-- ─── contact ───────────────────────────────────────────── -->
 <section class="section contact" id="contact">
   <div class="wrap">
-    <div style="position:relative;z-index:1">
-      <span class="eyebrow" style="display:inline-block;margin-bottom:18px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px">
-        / 06 — say hello
-      </span>
+    <div class="contact-inner">
+      <span class="eyebrow">/ 06 — say hello</span>
       <h2 class="section-h">let's <span style="color: var(--bg)">talk!</span></h2>
-      <p class="lede">sneha.subramanian4@gmail.com</p>
+      <p class="lede"><a href="mailto:sneha.subramanian4@gmail.com">sneha.subramanian4@gmail.com</a></p>
       <div class="contact-ctas">
         <a class="pill solid" href="https://www.linkedin.com/in/snehauxr/" target="_blank" rel="noreferrer">linkedin ↗</a>
       </div>
     </div>
 
     <div class="float-shapes" aria-hidden="true">
-      <div style="top:40px;left:60px">
-        <svg viewBox="-50 -50 100 100" width="64" height="64">
-          <path d="M0,-46 L11,-15 L42,-15 L17,4 L26,34 L0,16 L-26,34 L-17,4 L-42,-15 L-11,-15 Z" fill="var(--accent)"></path>
-        </svg>
-      </div>
-      <div style="top:80px;right:80px">
-        <svg viewBox="-50 -50 100 100" width="120" height="120">
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--accent)" transform="rotate(0)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--accent)" transform="rotate(60)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--accent)" transform="rotate(120)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--accent)" transform="rotate(180)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--accent)" transform="rotate(240)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--accent)" transform="rotate(300)"></ellipse>
-          <circle cx="0" cy="0" r="13" fill="var(--bg)"></circle>
-        </svg>
-      </div>
-      <div style="bottom:60px;right:120px">
-        <svg viewBox="-50 -50 100 100" width="80" height="80">
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(0)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(60)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(120)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(180)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(240)"></ellipse>
-          <ellipse cx="0" cy="-26" rx="14" ry="22" fill="var(--pop-2)" transform="rotate(300)"></ellipse>
-          <circle cx="0" cy="0" r="13" fill="var(--bg)"></circle>
-        </svg>
-      </div>
+      <div style="top: 40px; left: 60px; color: var(--accent)"><svg width="64" height="64"><use href="#shape-star" /></svg></div>
+      <div style="top: 80px; right: 80px; color: var(--accent)"><svg width="120" height="120"><use href="#shape-flower" /></svg></div>
+      <div style="bottom: 60px; right: 120px; color: var(--pop-2)"><svg width="80" height="80"><use href="#shape-flower" /></svg></div>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer class="wrap foot">
-  <div>© sneha subramanian, <span id="footYear"></span>. made with care + caffeine.</div>
-  <div style="display:flex;gap:18px">
+  <div>© sneha subramanian, <span class="js-year">2026</span>. made with care + caffeine.</div>
+  <div class="foot-links">
     <a href="https://www.linkedin.com/in/snehauxr/" target="_blank" rel="noreferrer">linkedin</a>
     <a href="#top">back to top ↑</a>
   </div>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
